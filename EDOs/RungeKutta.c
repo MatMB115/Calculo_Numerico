@@ -8,11 +8,7 @@
 //#define f(x, y) ((2*y) - (2*(x*x)) - 3)
 #define f(x, y) ((y * pow(x,2)) + ((- 1.1) * y))
 
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 12 – 19/07/22
 // 2019005687 - Matheus Martins Batista
-// 2021010165 - Jorge Alexandre Texeira Henriques Luís
-// 2020030584 - Luiz Raul Gomes Oliveira
 // Resolução de Equações Diferencias pelo método de RungeKutta de Ordem 2 e 4
 
 

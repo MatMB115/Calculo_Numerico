@@ -1,9 +1,6 @@
 #include<stdio.h>
 
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 06 – 31/05/22
 // 2019005687 - Matheus Martins Batista
-// 2019010032 - Stanley Andrade Senne
 // Interpolação Polinomial pelo Método de Newton
 
 int main(){

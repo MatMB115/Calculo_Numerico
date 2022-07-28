@@ -5,10 +5,7 @@
 #define f(x) pow(14, (2 * x))
 #define derivadaQuarta(x) (16 * (pow(14, (2 * x)) * pow(log(14), 4)))
 
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 10 – 08/07/22
 // 2019005687 - Matheus Martins Batista
-// 2020001519 - Mateus de Freitas Bonette
 // Cálculo de Integral pelo Método de 1/3 de Simpsom
 
 int main(){

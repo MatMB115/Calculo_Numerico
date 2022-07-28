@@ -7,11 +7,7 @@
 #define df(x, y) ((1 + 2*x)*sqrt(y))
 #define segundaDerivada(x, y) (2 * sqrt(y) + (x*x - 1.1)*(1 + 2*x)*sqrt(y))
 
-
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 11 – 12/07/22
 // 2019005687 - Matheus Martins Batista
-// 2019004090 - Anna Luiza Pereira Rosa
 // Resolução de Equações Diferencias por Euler simples e estendido
 
 

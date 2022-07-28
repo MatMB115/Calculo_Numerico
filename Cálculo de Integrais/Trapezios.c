@@ -5,10 +5,7 @@
 #define f(x) (6 + 3*cos(x))
 #define derivadaSegunda(x) (-3*cos(x))
 
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 09 – 28/06/22
 // 2019005687 - Matheus Martins Batista
-// 2018007720 - Vinícius Duarte Santiago Souza
 // Cálculo de Integral pelo Método do Trapézio Generelizado
 
 int main(){

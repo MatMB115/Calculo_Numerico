@@ -2,10 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 01 – 07/04/22
 // 2019005687– Matheus Martins Batista
-//
 // Cálculo de raízes para funções reais – Limite sup, inf e passo
 
 #define f(x) (x*x + 1.95*x - 2.09) //alterar a função aqui

@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 02 – 14/04/22
 // 2019005687– Matheus Martins Batista
-// 2020003596 - Kaique de Souza Leal Silva
-//
 // Cálculo de raízes para funções reais – Newton-Raphson
 
 //Define a função f(x)

@@ -1,9 +1,6 @@
 #include<stdio.h>
 
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 05 – 17/05/22
 // 2019005687– Matheus Martins Batista
-// 2020003596- Kaique de Souza Leal Silva
 // Aproximação de funções por Lagrange
 
 int main(){

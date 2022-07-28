@@ -1,9 +1,6 @@
 #include <stdio.h>
 
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 07 – 07/06/22
 // 2019005687 - Matheus Martins Batista
-// 2021020690 - Lucas Ferreira Alves 
 // Aproximação de curvas pelo método dos Mínimos Quadrados
 
 int main(){

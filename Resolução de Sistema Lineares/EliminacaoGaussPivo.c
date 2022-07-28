@@ -1,12 +1,9 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
-// CIC250 – Cálculo Numérico para Computação
-// Exercicio Pratico 03 – 28/04/22
 // 2019005687– Matheus Martins Batista
-// 2020003596 - Kaique de Souza Leal Silva
-//
-// Calculo de sistemas lineares - Eliminação de Gauss
+// Solução de sistemas lineares - Eliminação de Gauss com Pivoteamento
 
 //Essa função imprime os elementos de uma matriz
 void imprimeMatriz(int l, int c, double matriz[l][c]){
@@ -29,7 +26,6 @@ void preencheMatriz(int l, int c, double matriz[l][c]){
     }
 }
 
-
 //Essa função percorre as matrizes atribuindo os valores dos elementos de mesma posição da primeira à segunda
 void copiaMatriz(int l, int c, double matriz1[l][c], double matriz2[l][c]){
     int i,j;
@@ -42,29 +38,34 @@ void copiaMatriz(int l, int c, double matriz1[l][c], double matriz2[l][c]){
 
 //Essa função faz o escalomento e registra a solução do sistema
 void eleminacaoGauss(int l, int c, double a[l][c], double* Ico){
-    int i,j,k;
+    int i,j,k,imp=0;
     double ti;
+    for(i=0;i<l-1;i++){
+        //Pivoteamento
+        for(k=i+1;k<l;k++){
+            //Se o maior elemento em valor absoluto da coluna a ser zerada pertence a linha k, então troca-se as linhas
+            if(fabs(a[i][i])<fabs(a[k][i])){
+                //Troca os elementos das ambas as linhas
+                for(j=0;j<c;j++){                
+                    double temp;
+                    temp=a[i][j];
+                    a[i][j]=a[k][j];
+                    a[k][j]=temp;
+                }
+                printf("Troca da linha L%d pela linha L%d\n", i+1, k+1);
+            }
+        }
+    }
     //Realizar as operações elementares nas linhas da matriz para escaloná-la - Eliminação de Gauss
     for(i=0;i<l-1;i++){
-      if (a[i][i] == 0){
-        for (k=0;k<l-1;k++){
-          if (a[k][k] != 0){
-            for(j=0;j<c;j++){       
-              double temp;
-              temp=a[i][j];
-              a[i][j]=a[k][j];
-              a[k][j]=temp;
-            }
-            printf("Troca da linha L%d pela linha L%d\n", i+1, k+1);
-          }
-        }
-      }
         for(k=i+1;k<l;k++){
             double  term=a[k][i]/a[i][i];
             for(j=0;j<c;j++){
               a[k][j]=a[k][j]-term*a[i][j];
           }
         }
+      imprimeMatriz(l,c,a);
+      printf("\n");
     }
   //Verificar se é uma matriz impossível com os elementos da diagonal principal (det=0)
     for(i=0;i<c-1;i++){
@@ -83,10 +84,7 @@ void eleminacaoGauss(int l, int c, double a[l][c], double* Ico){
         Ico[k] = ti/a[i][k];
         k--;
     }
-  
 }
-
-
 
 //Verifica se a solução encontrada condiz com o valor dos termos independentes
 void verificaMatriz(int l, int c, double matriz[l][c], double* Ico){
@@ -130,7 +128,7 @@ int main(){
     imprimeMatriz(l,c,U);
     printf("\nA solucao do sistema:");
     for(i=0;i<c-1;i++){
-        printf("X%d = %lf \n", i+1, Ico[i]);
+        printf("X%d = %lf ", i+1, Ico[i]);
     }
     printf("\n");
     //Verificar se a solução encontrada é desejada

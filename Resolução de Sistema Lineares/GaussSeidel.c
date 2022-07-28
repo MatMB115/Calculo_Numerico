@@ -1,6 +1,5 @@
 
 #include<stdio.h>
-#include<termios.h>
 #include<math.h>
 
 #define f1(x,y,z) (y + 9)/10
@@ -12,16 +11,14 @@
 
 
 /* Main function */
-int main()
-{
+int main(){
  double x0=0, y0=0, z0=0, x1, y1, z1, e1, e2, e3, e;
  int count=1;
  printf("Enter tolerable error:\n");
  scanf("%lf", &e);
 
  printf("\nCount\tx\ty\tz\n");
- do
- {
+ do{
   /* Calculation */
   x1 = f1(x0,y0,z0);
   y1 = f2(x1,y0,z0);
