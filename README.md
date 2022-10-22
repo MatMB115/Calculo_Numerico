@@ -1,5 +1,5 @@
 # Cálculo Numérico para Computação
-  Implementar em linguagem C os métodos apresentados na disciplina de Cálculo Numérico ofericida pela Universidade Federal de Itajubá.
+  Implementar em linguagem C os métodos apresentados na disciplina de Cálculo Numérico ofertada pela Universidade Federal de Itajubá.
 
 ## Cálculos de Raízes
   - [x] Bissecção;
